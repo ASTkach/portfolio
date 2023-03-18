@@ -521,31 +521,29 @@
                                     <label class="form__label" style="--order: 4">
                                         <input
                                             type="text"
-                                            class="form__input _req"
+                                            class="form__input"
                                             name="name"
                                             placeholder="Ім'я та прізвище"
                                             tabindex="2"
                                             required
+                                            pattern="[A-Za-z]+"
+                                            title="letters only"
                                         />
                                     </label>
                                     <label class="form__label" style="--order: 5">
                                         <input
                                             type="email"
-                                            class="form__input _req"
+                                            class="form__input"
                                             name="email"
                                             placeholder="Поштова адреса"
                                             tabindex="2"
                                             required
+                                            pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$"
+                                            title="xyz@something.com"
                                         />
                                     </label>
                                     <label class="form__label" style="--order: 6">
-                                        <textarea
-                                            class="form__message _req"
-                                            name="message"
-                                            placeholder="Повідомлення"
-                                            tabindex="2"
-                                            required
-                                        ></textarea>
+                                        <textarea class="form__message" name="message" placeholder="Повідомлення" tabindex="2" required></textarea>
                                     </label>
                                     <button class="btn btn--submit" type="submit" tabindex="2" style="--order: 7">Відправити</button>
                                 </form>

@@ -1075,12 +1075,6 @@ ul {
     resize: none;
     min-height: 12.5rem;
 }
-.form__input._error,
-.form__message._error {
-    border-color: var(--red-color);
-    -webkit-box-shadow: -3px 3px 0px 0px var(--basic-bg), -5px 5px 0px 0px var(--red-color);
-    box-shadow: -3px 3px 0px 0px var(--basic-bg), -5px 5px 0px 0px var(--red-color);
-}
 .form__input:focus,
 .form__input:-webkit-autofill,
 .form__input:-webkit-autofill:hover,
