@@ -207,6 +207,7 @@ ul {
         -webkit-animation: show-header-icon 0.6s linear forwards 0.3s;
         animation: show-header-icon 0.6s linear forwards 0.3s;
         z-index: 3;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
     .header__icon polygon,
     .header__icon line {
@@ -299,6 +300,7 @@ ul {
     font-family: var(--secondary-family);
     font-size: var(--fz-600);
     color: var(--color-accent-secondary);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .logo__text {
     -webkit-transform: rotate(-90deg);
@@ -386,7 +388,7 @@ ul {
     color: var(--color-accent-secondary);
 }
 
-@media (any-hover: hover) {
+@media (hover: hover) {
     .nav__button:hover,
     .nav__button:focus-visible {
         color: var(--color-accent-secondary);
@@ -1425,7 +1427,7 @@ ul {
     border: var(--border-main-width) solid var(--green-color);
 }
 
-@media (any-hover: hover) {
+@media (hover: hover) {
     .game__item:hover {
         border: var(--border-main-width) solid hsl(160deg, 41%, 70%);
         background-color: hsl(160deg, 41%, 70%);
@@ -1472,7 +1474,7 @@ ul {
 @media screen and (max-width: 860px) {
     .game {
         position: absolute;
-        top: 0;
+        top: 30px;
         height: auto;
         opacity: 0.1;
         pointer-events: none;
@@ -1649,7 +1651,7 @@ ul {
     transition: all 0.3s ease 0s;
 }
 
-@media (any-hover: hover) {
+@media (hover: hover) {
     .contacts__link--main:hover::before,
     .contacts__link--main:focus-visible::before {
         background-color: var(--color-accent-therd);
@@ -1807,7 +1809,7 @@ ul {
         transform: scale(1);
     }
 }
-@media (any-hover: hover) {
+@media (hover: hover) {
     .btn:hover,
     .btn:focus-visible {
         background-color: var(--color-accent-secondary);
