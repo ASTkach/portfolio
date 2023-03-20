@@ -609,8 +609,8 @@ ul {
     padding: 1.25rem;
     border: var(--border-main-width) solid var(--color-accent-primary);
     border-radius: 0.625rem;
-    -webkit-box-shadow: 3px -3px 4px var(--color-accent-primary);
-    box-shadow: 3px -3px 4px var(--color-accent-primary);
+    -webkit-box-shadow: 0px 0px 5px 2px var(--color-accent-primary);
+    box-shadow: 0px 0px 5px 2px var(--color-accent-primary);
     background-color: var(--secondary-bg);
     -webkit-transform: translateY(30%);
     -ms-transform: translateY(30%);
@@ -1426,6 +1426,29 @@ ul {
     border: var(--border-main-width) solid var(--green-color);
 }
 
+@-webkit-keyframes squares-animation {
+    0% {
+        background-color: hsl(160deg, 41%, 70%);
+    }
+    50% {
+        background-color: var(--secondary-bg);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes squares-animation {
+    0% {
+        background-color: hsl(160deg, 41%, 70%);
+    }
+    50% {
+        background-color: var(--secondary-bg);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @media (hover: hover) {
     .game__item:hover {
         border: var(--border-main-width) solid hsl(160deg, 41%, 70%);
@@ -1456,33 +1479,11 @@ ul {
 @media screen and (min-width: 861px) {
     .game__item,
     .game__switcher {
-        -webkit-animation: desk-squares-animation 0.3s linear forwards;
-        animation: desk-squares-animation 0.3s linear forwards;
+        -webkit-animation: squares-animation 0.3s linear forwards;
+        animation: squares-animation 0.3s linear forwards;
         -webkit-animation-delay: calc(var(--order) * 100ms);
         animation-delay: calc(var(--order) * 100ms);
         opacity: 0;
-    }
-    @-webkit-keyframes desk-squares-animation {
-        0% {
-            background-color: hsl(160deg, 41%, 70%);
-        }
-        50% {
-            background-color: var(--secondary-bg);
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-    @keyframes desk-squares-animation {
-        0% {
-            background-color: hsl(160deg, 41%, 70%);
-        }
-        50% {
-            background-color: var(--secondary-bg);
-        }
-        100% {
-            opacity: 1;
-        }
     }
 }
 @media screen and (max-width: 860px) {
