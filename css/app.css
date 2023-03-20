@@ -64,7 +64,6 @@
     --color-accent-primary: hsl(190, 100%, 23%);
     --color-accent-secondary: hsl(39, 100%, 47%);
     --color-accent-therd: hsl(30, 98%, 40%);
-    --color-btn-on-hover: hsl(39, 100%, 67%);
     --green-color: hsl(160, 91%, 35%);
     --red-color: hsl(5, 81%, 38%);
     --border-main-width: 3px;
@@ -212,11 +211,14 @@ ul {
         display: block;
         width: 1.5625rem;
         height: 1.5625rem;
+        margin-right: 5px;
         cursor: pointer;
         -webkit-transform: scale(0);
         -ms-transform: scale(0);
         transform: scale(0);
         -webkit-animation: element-scale 0.6s linear forwards 0.3s;
+        box-shadow: 0 0 3px 4px var(--secondary-bg), 0 0 0 5px var(--color-accent-therd);
+        border-radius: 1px;
         animation: element-scale 0.6s linear forwards 0.3s;
         z-index: 3;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -258,7 +260,7 @@ ul {
     font-family: var(--secondary-family);
     font-size: var(--fz-600);
     color: var(--color-accent-secondary);
-    text-shadow: 1px 1px 0px var(--color-accent-therd), 2px 2px 0px hsl(30, 98%, 30%), 3px 3px 0px hsl(30, 98%, 20%), 4px 4px 0px hsl(30, 98%, 10%);
+    text-shadow: 0.5px 0px 0px var(--secondary-bg), 2px 1px 0px var(--color-accent-therd);
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
@@ -1158,7 +1160,7 @@ ul {
 }
 .title__accent {
     display: block;
-    color: var(--color-accent-therd);
+    color: var(--color-accent-secondary);
 }
 .title__medium {
     font-weight: var(--fw-regular);
