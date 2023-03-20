@@ -1425,7 +1425,14 @@ ul {
 .game__switcher._player {
     border: var(--border-main-width) solid var(--green-color);
 }
-
+.game__item,
+.game__switcher {
+    -webkit-animation: squares-animation 0.3s linear forwards;
+    animation: squares-animation 0.3s linear forwards;
+    -webkit-animation-delay: calc(var(--order) * 100ms);
+    animation-delay: calc(var(--order) * 100ms);
+    opacity: 0;
+}
 @-webkit-keyframes squares-animation {
     0% {
         background-color: hsl(160deg, 41%, 70%);
@@ -1449,7 +1456,7 @@ ul {
     }
 }
 
-@media (hover: hover) {
+/* @media (hover: hover) {
     .game__item:hover {
         border: var(--border-main-width) solid hsl(160deg, 41%, 70%);
         background-color: hsl(160deg, 41%, 70%);
@@ -1459,7 +1466,7 @@ ul {
         -ms-transform: scale(1.2);
         transform: scale(1.2);
     }
-}
+} */
 
 @media screen and (min-width: 1170.99px) {
     .game {
@@ -1477,13 +1484,14 @@ ul {
     }
 }
 @media screen and (min-width: 861px) {
-    .game__item,
-    .game__switcher {
-        -webkit-animation: squares-animation 0.3s linear forwards;
-        animation: squares-animation 0.3s linear forwards;
-        -webkit-animation-delay: calc(var(--order) * 100ms);
-        animation-delay: calc(var(--order) * 100ms);
-        opacity: 0;
+    .game__item:hover {
+        border: var(--border-main-width) solid hsl(160deg, 41%, 70%);
+        background-color: hsl(160deg, 41%, 70%);
+    }
+    .game__switcher:hover {
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
     }
 }
 @media screen and (max-width: 860px) {
