@@ -195,6 +195,18 @@ ul {
         height: 4.875rem;
     }
 }
+@-webkit-keyframes element-scale {
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@keyframes element-scale {
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
 @media screen and (max-width: 860px) {
     .header__icon {
         display: block;
@@ -204,8 +216,8 @@ ul {
         -webkit-transform: scale(0);
         -ms-transform: scale(0);
         transform: scale(0);
-        -webkit-animation: show-header-icon 0.6s linear forwards 0.3s;
-        animation: show-header-icon 0.6s linear forwards 0.3s;
+        -webkit-animation: element-scale 0.6s linear forwards 0.3s;
+        animation: element-scale 0.6s linear forwards 0.3s;
         z-index: 3;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
@@ -235,28 +247,6 @@ ul {
     }
     .header__icon._active line:last-of-type {
         stroke-dashoffset: 16;
-    }
-
-    @-webkit-keyframes show-header-icon {
-        0% {
-            -webkit-transform: scale(0);
-            transform: scale(0);
-        }
-        100% {
-            -webkit-transform: scale(1);
-            transform: scale(1);
-        }
-    }
-
-    @keyframes show-header-icon {
-        0% {
-            -webkit-transform: scale(0);
-            transform: scale(0);
-        }
-        100% {
-            -webkit-transform: scale(1);
-            transform: scale(1);
-        }
     }
 }
 
@@ -297,9 +287,10 @@ ul {
     color: var(--color-accent-secondary);
 }
 .logo__text--rotate {
-    -webkit-transform: rotate(-90deg);
+    rotate: -90deg;
+    /* -webkit-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
+    transform: rotate(-90deg); */
 }
 
 @-webkit-keyframes logo-scale {
@@ -386,24 +377,10 @@ ul {
     .nav__button {
         -webkit-transform: scale(0);
         transform: scale(0);
-        -webkit-animation: nav-button-scale 0.2s ease forwards;
-        animation: nav-button-scale 0.2s ease forwards;
+        -webkit-animation: element-scale 0.2s ease forwards;
+        animation: element-scale 0.2s ease forwards;
         -webkit-animation-delay: calc(var(--order) * 220ms);
         animation-delay: calc(var(--order) * 220ms);
-    }
-
-    @-webkit-keyframes nav-button-scale {
-        100% {
-            -webkit-transform: scale(1);
-            transform: scale(1);
-        }
-    }
-
-    @keyframes nva-button-scale {
-        100% {
-            -webkit-transform: scale(1);
-            transform: scale(1);
-        }
     }
 }
 @media screen and (max-width: 860px) {
@@ -477,6 +454,11 @@ ul {
         -webkit-transform: translate(1px, -1px);
         -ms-transform: translate(1px, -1px);
         transform: translate(1px, -1px);
+    }
+}
+@media screen and (max-height: 500px) {
+    .nav__body._active {
+        padding-block: 300px;
     }
 }
 
@@ -883,8 +865,11 @@ ul {
         align-items: center;
         gap: 5rem;
         margin-top: 2.5rem;
-        -webkit-animation: button-scale 0.9s ease forwards;
-        animation: button-scale 0.9s ease forwards;
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+        -webkit-animation: element-scale 0.9s ease forwards;
+        animation: element-scale 0.9s ease forwards;
     }
     .section__button-main,
     .section__button-arrows {
@@ -1100,10 +1085,6 @@ ul {
 }
 
 @-webkit-keyframes form-scale {
-    0% {
-        -webkit-transform: scale(0);
-        transform: scale(0);
-    }
     50% {
         -webkit-transform: scale(1.2);
         transform: scale(1.2);
@@ -1115,10 +1096,6 @@ ul {
 }
 
 @keyframes form-scale {
-    0% {
-        -webkit-transform: scale(0);
-        transform: scale(0);
-    }
     50% {
         -webkit-transform: scale(1.2);
         transform: scale(1.2);
@@ -1404,6 +1381,14 @@ ul {
     box-shadow: inset 0px 0px 8px -1px var(--basic-bg);
     background-color: var(--green-color);
 }
+.game__item,
+.game__switcher {
+    -webkit-animation: squares-animation 0.3s linear forwards;
+    animation: squares-animation 0.3s linear forwards;
+    -webkit-animation-delay: calc(var(--order) * 100ms);
+    animation-delay: calc(var(--order) * 100ms);
+    opacity: 0;
+}
 .game__switcher {
     position: absolute;
     top: 0;
@@ -1412,9 +1397,6 @@ ul {
     height: 1.25rem;
     border-radius: 0.3125rem;
     background-color: var(--secondary-bg);
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
@@ -1424,14 +1406,6 @@ ul {
 }
 .game__switcher._player {
     border: var(--border-main-width) solid var(--green-color);
-}
-.game__item,
-.game__switcher {
-    -webkit-animation: squares-animation 0.3s linear forwards;
-    animation: squares-animation 0.3s linear forwards;
-    -webkit-animation-delay: calc(var(--order) * 100ms);
-    animation-delay: calc(var(--order) * 100ms);
-    opacity: 0;
 }
 @-webkit-keyframes squares-animation {
     0% {
@@ -1794,8 +1768,8 @@ ul {
     max-width: 15.625rem;
     padding: 0.9375rem;
     font-size: var(--fz-300);
-    -webkit-animation: main-button-scale 0.9s ease forwards;
-    animation: button-scale 0.9s ease forwards;
+    -webkit-animation: element-scale 0.9s ease forwards;
+    animation: element-scale 0.9s ease forwards;
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
     transform: scale(0);
@@ -1811,19 +1785,6 @@ ul {
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
     transform: scale(0);
-}
-@-webkit-keyframes button-scale {
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-}
-
-@keyframes main-button-scale {
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
 }
 @media (hover: hover) {
     .btn:hover,
