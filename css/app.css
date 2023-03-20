@@ -65,6 +65,7 @@
     --color-accent-primary: hsl(190, 100%, 23%);
     --color-accent-secondary: hsl(39, 100%, 47%);
     --color-accent-therd: hsl(30, 98%, 40%);
+    --title-accent: hsl(39, 100%, 60%);
     --green-color: hsl(160, 91%, 35%);
     --red-color: hsl(5, 81%, 38%);
     --border-main-width: 3px;
@@ -1161,7 +1162,7 @@ ul {
 }
 .title__accent {
     display: block;
-    color: hsl(39, 100%, 58%);
+    color: var(--title-accent);
 }
 .title__medium {
     font-weight: var(--fw-regular);
