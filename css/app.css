@@ -440,8 +440,9 @@ ul {
     }
 }
 @media screen and (max-height: 500px) {
-    .nav__body._active {
-        padding-block: 300px;
+    .nav__body._active .nav__list {
+        min-height: 540px;
+        padding-bottom: 40px;
     }
 }
 
