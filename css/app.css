@@ -254,50 +254,29 @@ ul {
 
 .logo {
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    /* -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; */
-    gap: 3px;
-    /* -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center; */
-    /* background-color: transparent; */
+    line-height: 1;
+    font-family: var(--secondary-family);
+    font-size: var(--fz-600);
+    color: var(--color-accent-secondary);
+    text-shadow: 1px 1px 0px var(--color-accent-therd), 2px 2px 0px hsl(30, 98%, 30%), 3px 3px 0px hsl(30, 98%, 20%), 4px 4px 0px hsl(30, 98%, 10%);
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     -webkit-animation: logo-scale 0.6s linear forwards 0.3s;
     animation: logo-scale 0.6s linear forwards 0.3s;
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0);
+    -webkit-transform: rotate(360deg) scale(0);
+    -ms-transform: rotate(360deg) scale(0);
+    transform: rotate(360deg) scale(0);
     translate: 0.3125rem;
+    rotate: -90deg;
     z-index: 4;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .logo:focus-visible .logo__icon {
     color: var(--color-accent-therd);
 }
-.logo__text {
-    line-height: 1;
-    font-family: var(--secondary-family);
-    font-size: var(--fz-600);
-    color: var(--color-accent-secondary);
-}
-.logo__text--rotate {
-    rotate: -90deg;
-    /* -webkit-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg); */
-}
 
 @-webkit-keyframes logo-scale {
-    0% {
-        -webkit-transform: rotate(360deg) scale(0);
-        transform: rotate(360deg) scale(0);
-    }
     100% {
         -webkit-transform: rotate(0) scale(1);
         transform: rotate(0) scale(1);
@@ -1179,7 +1158,7 @@ ul {
 }
 .title__accent {
     display: block;
-    color: var(--color-accent-secondary);
+    color: var(--color-accent-therd);
 }
 .title__medium {
     font-weight: var(--fw-regular);
@@ -1430,18 +1409,6 @@ ul {
     }
 }
 
-/* @media (hover: hover) {
-    .game__item:hover {
-        border: var(--border-main-width) solid hsl(160deg, 41%, 70%);
-        background-color: hsl(160deg, 41%, 70%);
-    }
-    .game__switcher:hover {
-        -webkit-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        transform: scale(1.2);
-    }
-} */
-
 @media screen and (min-width: 1170.99px) {
     .game {
         right: 2.625rem;
@@ -1496,6 +1463,12 @@ ul {
     .game__switcher {
         left: 50%;
         top: -30%;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .game._play {
+        top: 30%;
     }
 }
 
