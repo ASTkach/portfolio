@@ -640,7 +640,7 @@ ul {
     left: 0;
     width: 20%;
     height: 0.1875rem;
-    background-color: var(--color-accent-therd);
+    background-color: var(--color-accent-secondary);
 }
 .section__video-wrap {
     position: relative;
@@ -1161,7 +1161,7 @@ ul {
 }
 .title__accent {
     display: block;
-    color: var(--color-accent-secondary);
+    color: hsl(39, 100%, 58%);
 }
 .title__medium {
     font-weight: var(--fw-regular);
@@ -1750,10 +1750,10 @@ ul {
     font-weight: var(--fw-semi-bold);
     font-size: var(--fz-300);
     background-color: var(--secondary-bg);
-    border: var(--border-main-width) solid var(--color-accent-therd);
+    border: var(--border-main-width) solid var(--color-accent-secondary);
     border-radius: 0.3125rem;
-    -webkit-box-shadow: 3px -3px 0px 0px var(--basic-bg), 5px -5px 0px 0px var(--color-accent-therd);
-    box-shadow: 3px -3px 0px 0px var(--basic-bg), 5px -5px 0px 0px var(--color-accent-therd);
+    -webkit-box-shadow: 3px -3px 0px 0px var(--basic-bg), 5px -5px 0px 0px var(--color-accent-secondary);
+    box-shadow: 3px -3px 0px 0px var(--basic-bg), 5px -5px 0px 0px var(--color-accent-secondary);
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
@@ -1768,8 +1768,8 @@ ul {
     transform: scale(0);
 }
 .btn--submit {
-    -webkit-box-shadow: -3px 3px 0px 0px var(--basic-bg), -5px 5px 0px 0px var(--color-accent-therd);
-    box-shadow: -3px 3px 0px 0px var(--basic-bg), -5px 5px 0px 0px var(--color-accent-therd);
+    -webkit-box-shadow: -3px 3px 0px 0px var(--basic-bg), -5px 5px 0px 0px var(--color-accent-secondary);
+    box-shadow: -3px 3px 0px 0px var(--basic-bg), -5px 5px 0px 0px var(--color-accent-secondary);
     padding: 0.9375rem;
     -webkit-animation: form-scale 0.2s linear forwards;
     animation: form-scale 0.2s linear forwards;
@@ -1782,9 +1782,9 @@ ul {
 @media (hover: hover) {
     .btn:hover,
     .btn:focus-visible {
-        background-color: var(--color-accent-therd);
-        color: hsl(0, 0%, 100%);
+        background-color: var(--color-accent-secondary);
+        /* color: hsl(0, 0%, 100%); */
         /* text-shadow: 1px 0 3px var(--secondary-bg); */
-        /* color: var(--basic-bg); */
+        color: var(--basic-bg);
     }
 }
