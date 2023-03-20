@@ -280,9 +280,9 @@ ul {
     transition: all 0.3s ease 0s;
     -webkit-animation: logo-scale 0.6s linear forwards 0.3s;
     animation: logo-scale 0.6s linear forwards 0.3s;
-    -webkit-transform: rotate(0) scale(0);
-    -ms-transform: rotate(0) scale(0);
-    transform: rotate(0) scale(0);
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
     translate: 0.3125rem;
     z-index: 4;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -345,16 +345,9 @@ ul {
     text-transform: uppercase;
     border: none;
     background-color: transparent;
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0);
-    -webkit-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-    -webkit-animation: button-scale 0.3s ease forwards;
-    animation: button-scale 0.3s ease forwards;
-    -webkit-animation-delay: calc(var(--order) * 280ms);
-    animation-delay: calc(var(--order) * 280ms);
+    -webkit-transition: all 0.2s ease 0s;
+    -o-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
     z-index: 3;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -386,6 +379,31 @@ ul {
     .nav__button:hover,
     .nav__button:focus-visible {
         color: var(--color-accent-secondary);
+    }
+}
+
+@media screen and (min-width: 861px) {
+    .nav__button {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        -webkit-animation: nav-button-scale 0.2s ease forwards;
+        animation: nav-button-scale 0.2s ease forwards;
+        -webkit-animation-delay: calc(var(--order) * 220ms);
+        animation-delay: calc(var(--order) * 220ms);
+    }
+
+    @-webkit-keyframes nav-button-scale {
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+
+    @keyframes nva-button-scale {
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
     }
 }
 @media screen and (max-width: 860px) {
@@ -865,9 +883,6 @@ ul {
         align-items: center;
         gap: 5rem;
         margin-top: 2.5rem;
-        -webkit-transform: scale(0);
-        -ms-transform: scale(0);
-        transform: scale(0);
         -webkit-animation: button-scale 0.9s ease forwards;
         animation: button-scale 0.9s ease forwards;
     }
@@ -1338,11 +1353,6 @@ ul {
     -webkit-transition: all 0.6s ease 0s;
     -o-transition: all 0.6s ease 0s;
     transition: all 0.6s ease 0s;
-    -webkit-animation: squares-animation 0.3s linear forwards;
-    animation: squares-animation 0.3s linear forwards;
-    -webkit-animation-delay: calc(var(--order) * 100ms);
-    animation-delay: calc(var(--order) * 100ms);
-    opacity: 0;
     cursor: pointer;
 }
 .game__item::before {
@@ -1394,10 +1404,6 @@ ul {
     box-shadow: inset 0px 0px 8px -1px var(--basic-bg);
     background-color: var(--green-color);
 }
-.game__item:active {
-    border-color: var(--green-color);
-    background-color: var(--secondary-bg);
-}
 .game__switcher {
     position: absolute;
     top: 0;
@@ -1406,11 +1412,6 @@ ul {
     height: 1.25rem;
     border-radius: 0.3125rem;
     background-color: var(--secondary-bg);
-    -webkit-animation: squares-animation 0.3s linear forwards;
-    animation: squares-animation 0.3s linear forwards;
-    -webkit-animation-delay: calc(var(--order) * 100ms);
-    animation-delay: calc(var(--order) * 100ms);
-    opacity: 0;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
@@ -1436,30 +1437,7 @@ ul {
         transform: scale(1.2);
     }
 }
-@-webkit-keyframes squares-animation {
-    0% {
-        opacity: 0;
-        background-color: hsl(160deg, 41%, 70%);
-    }
-    50% {
-        background-color: var(--secondary-bg);
-    }
-    100% {
-        opacity: 1;
-    }
-}
-@keyframes squares-animation {
-    0% {
-        opacity: 0;
-        background-color: hsl(160deg, 41%, 70%);
-    }
-    50% {
-        background-color: var(--secondary-bg);
-    }
-    100% {
-        opacity: 1;
-    }
-}
+
 @media screen and (min-width: 1170.99px) {
     .game {
         right: 2.625rem;
@@ -1475,6 +1453,38 @@ ul {
         top: 9%;
     }
 }
+@media screen and (min-width: 861px) {
+    .game__item,
+    .game__switcher {
+        -webkit-animation: desk-squares-animation 0.3s linear forwards;
+        animation: desk-squares-animation 0.3s linear forwards;
+        -webkit-animation-delay: calc(var(--order) * 100ms);
+        animation-delay: calc(var(--order) * 100ms);
+        opacity: 0;
+    }
+    @-webkit-keyframes desk-squares-animation {
+        0% {
+            background-color: hsl(160deg, 41%, 70%);
+        }
+        50% {
+            background-color: var(--secondary-bg);
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    @keyframes desk-squares-animation {
+        0% {
+            background-color: hsl(160deg, 41%, 70%);
+        }
+        50% {
+            background-color: var(--secondary-bg);
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
 @media screen and (max-width: 860px) {
     .game {
         position: absolute;
@@ -1488,6 +1498,8 @@ ul {
         -webkit-transition: all 0.3s ease 0.1s;
         -o-transition: all 0.3s ease 0.1s;
         transition: all 0.3s ease 0.1s;
+        -webkit-animation: fild-animation 0.9s linear forwards;
+        animation: fild-animation 0.9s linear forwards;
         z-index: 0;
         scale: 1;
     }
@@ -1773,7 +1785,7 @@ ul {
     max-width: 15.625rem;
     padding: 0.9375rem;
     font-size: var(--fz-300);
-    -webkit-animation: button-scale 0.9s ease forwards;
+    -webkit-animation: main-button-scale 0.9s ease forwards;
     animation: button-scale 0.9s ease forwards;
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
@@ -1791,23 +1803,14 @@ ul {
     -ms-transform: scale(0);
     transform: scale(0);
 }
-
 @-webkit-keyframes button-scale {
-    0% {
-        -webkit-transform: scale(0);
-        transform: scale(0);
-    }
     100% {
         -webkit-transform: scale(1);
         transform: scale(1);
     }
 }
 
-@keyframes button-scale {
-    0% {
-        -webkit-transform: scale(0);
-        transform: scale(0);
-    }
+@keyframes main-button-scale {
     100% {
         -webkit-transform: scale(1);
         transform: scale(1);
