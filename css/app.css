@@ -306,7 +306,24 @@ ul {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     gap: 2.1875rem;
+}
+.nav__item--lng {
+    position: relative;
+    border: 2px solid var(--color-accent-secondary);
+    border-radius: 2px;
+    min-height: 25px;
+    overflow: hidden;
+}
+.nav__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: inline-flex;
+    padding: 3px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .nav__button {
     position: relative;
@@ -348,8 +365,13 @@ ul {
 .nav__button._pressed-btn {
     color: var(--color-accent-secondary);
 }
-
 @media (hover: hover) {
+    .nav__item--lng:hover ._en-hidden::before,
+    .nav__item--lng:focus ._en-hidden::before,
+    .nav__item--lng:hover ._ua-hidden::after,
+    .nav__item--lng:focus ._ua-hidden::after {
+        transform: translateY(0);
+    }
     .nav__button:hover,
     .nav__button:focus-visible {
         color: var(--color-accent-secondary);
@@ -357,13 +379,38 @@ ul {
 }
 
 @media screen and (min-width: 861px) {
-    .nav__button {
+    .nav__button,
+    .nav__item--lng {
         -webkit-transform: scale(0);
         transform: scale(0);
         -webkit-animation: element-scale 0.2s ease forwards;
         animation: element-scale 0.2s ease forwards;
         -webkit-animation-delay: calc(var(--order) * 220ms);
         animation-delay: calc(var(--order) * 220ms);
+    }
+    .nav__link::before,
+    .nav__link::after {
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding-top: 2px;
+        transform: translateY(-100%);
+        transition: all 0.3s ease 0s;
+        font-size: var(--basic-fz);
+        font-weight: var(--fw-semi-bold);
+        color: var(--secondary-bg);
+        background-color: var(--color-accent-secondary);
+    }
+    .nav__link::before {
+        content: "EN";
+        padding-left: 3px;
+    }
+    .nav__link::after {
+        content: "UA";
+        padding-left: 2px;
     }
 }
 @media screen and (max-width: 860px) {
@@ -413,8 +460,36 @@ ul {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        max-width: 7.5rem;
+        width: 100%;
         min-height: 3.125rem;
+    }
+    .nav__item--lng {
+        width: 60%;
+    }
+    .nav__item--lng::before {
+        position: absolute;
+        content: "";
+        width: 50%;
+        height: 100%;
+        background-color: var(--color-accent-secondary);
+    }
+    .nav__link {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        gap: 0.8rem;
+        width: 100%;
+        z-index: 1;
+    }
+    .nav__link span {
+        color: hsl(45deg, 20%, 55%);
+        font-weight: var(--fw-semi-bold);
+    }
+    .nav__link .language--first {
+        color: var(--secondary-bg);
     }
     .nav__button {
         border-radius: 0.625rem;
@@ -479,7 +554,7 @@ ul {
     visibility: hidden;
     opacity: 0;
 }
-.section__content::before,
+/* .section__content::before,
 .section__content::after {
     position: absolute;
     content: "";
@@ -488,7 +563,7 @@ ul {
     -webkit-animation: pseudoelement-fade-in 0.9s ease forwards;
     animation: pseudoelement-fade-in 0.9s ease forwards;
     z-index: 0;
-}
+} */
 .section__content::before {
     left: 0;
     -webkit-transform: rotate(-25deg);
@@ -623,6 +698,9 @@ ul {
     opacity: 0;
     -webkit-animation: text-fade-in 0.9s ease forwards;
     animation: text-fade-in 0.9s ease forwards;
+}
+.section__text--main {
+    animation-delay: 0.3s;
 }
 .section__text--about {
     font-size: var(--basic-fz);
@@ -1169,6 +1247,16 @@ ul {
     font-weight: var(--fw-regular);
 }
 
+.letters {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.letters._visibl {
+    opacity: 1;
+    visibility: visible;
+}
+
 .letters span {
     position: relative;
     opacity: 0;
@@ -1414,11 +1502,11 @@ ul {
     }
 }
 
-@media screen and (min-width: 1170.99px) {
+/* @media screen and (min-width: 1170.99px) {
     .game {
         right: 2.625rem;
     }
-}
+} */
 @media screen and (max-width: 1170px) {
     .game__list {
         grid-template-columns: repeat(3, 3.75rem);

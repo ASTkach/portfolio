@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Моє портфоліо</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Coiny&family=Exo+2:wght@400;600&display=swap" rel="stylesheet" />
@@ -23,20 +23,29 @@
                         <div class="nav__body">
                             <ul class="nav__list">
                                 <li class="nav__item">
-                                    <button type="button" class="nav__button _pressed-btn" id="main" style="--order: 5" tabindex="1">Головна</button>
+                                    <button type="button" class="nav__button _pressed-btn lng-home" id="main" style="--order: 5" tabindex="1">
+                                        Головна
+                                    </button>
                                     <div class="progress-bar"></div>
                                 </li>
                                 <li class="nav__item">
-                                    <button type="button" class="nav__button" id="about" style="--order: 6" tabindex="1">Про мене</button>
+                                    <button type="button" class="nav__button lng-about" id="about" style="--order: 6" tabindex="1">Про мене</button>
                                     <div class="progress-bar"></div>
                                 </li>
                                 <li class="nav__item">
-                                    <button type="button" class="nav__button" id="projects" style="--order: 7" tabindex="1">Проєкти</button>
+                                    <button type="button" class="nav__button lng-projects" id="projects" style="--order: 7" tabindex="1">
+                                        Проєкти
+                                    </button>
                                     <div class="progress-bar"></div>
                                 </li>
                                 <li class="nav__item">
-                                    <button type="button" class="nav__button" id="contacts" style="--order: 8" tabindex="1">Контакти</button>
+                                    <button type="button" class="nav__button lng-contact" id="contacts" style="--order: 8" tabindex="1">
+                                        Контакти
+                                    </button>
                                     <div class="progress-bar"></div>
+                                </li>
+                                <li class="nav__item nav__item--lng" style="--order: 9" tabindex="1">
+                                    <a href="#" class="nav__link language">UA</a>
                                 </li>
                             </ul>
                         </div>
@@ -56,12 +65,14 @@
                             <div class="section__block section__block--main">
                                 <div class="section__text-wrap section__text-wrap--main">
                                     <h1 class="title title--main">
-                                        <span class="letters letters0">Вітаю, я</span>
-                                        <span class="title__accent letters letters1">Aнатолій Ткач</span>
+                                        <span class="letters letters0 lng-greetings">Вітаю, я</span>
+                                        <span class="title__accent letters letters1 lng-name">Aнатолій Ткач</span>
                                         <span class="title__medium letters letters2">Frontend Developer</span>
                                     </h1>
-                                    <p class="section__text">Маю багато завзяття і хочу застосовувати його у нових проєктах.</p>
-                                    <button type="button" class="btn btn--main">Зв'язатися</button>
+                                    <p class="section__text section__text--main lng-slogan">
+                                        Маю багато завзяття і хочу застосовувати його у нових проєктах.
+                                    </p>
+                                    <button type="button" class="btn btn--main lng-getInTouch">Зв'язатися</button>
                                 </div>
                                 <div class="section__button">
                                     <span class="section__button-arrows"></span>
@@ -86,24 +97,24 @@
                         </div>
                         <div class="section__content section__content--about" id="aboutContent">
                             <div class="section__text-wrap section__text-wrap--about">
-                                <h2 class="title letters letters3">Про мене</h2>
+                                <h2 class="title letters letters3 lng-aboutMe">Про мене</h2>
                                 <p class="section__text section__text--about">
-                                    <span class="section__text-row">
+                                    <span class="section__text-row lng-aboutMePart1">
                                         Вітаю знову! Мене все ще звати Анатолій Ткач. Мешкаю у Києві. Маю вищу технічну освіту (НТУУ"КПІ" ТЕФ).
                                         Основним заняттям для мене завжди була музика, але на даному етапі свого життя, я пробую реалізувати свій
                                         творчий потенціал у web-розробці.
                                     </span>
-                                    <span class="section__text-row">
+                                    <span class="section__text-row lng-aboutMePart2">
                                         Маю досвід роботи 1 рік. Здебільшого це робота з розвитку своїх навичок, але я також мав справи із реальними
                                         проєктами, котрі, на цей момент, знаходяться на фінальній стадії розробки. Пройшов Bogdan Stashchuk JavaScript
                                         course та Kottans frontend course (3 місяці).
                                     </span>
-                                    <span class="section__text-row">
+                                    <span class="section__text-row lng-aboutMePart3">
                                         Добре працюю як в колективі, так і самостійно. Легко знаходжу спільну мову з колегами. Вмію відстоювати як
                                         свою позицію, так і прислухатися до чужої. Комунікабельний, пунктуальний, надійний. Здатен знайти рішення для
                                         поставленої задачі.
                                     </span>
-                                    <span class="section__text-row">
+                                    <span class="section__text-row lng-aboutMePart4">
                                         Знаюся на семантичній верстці, використовую БЕМ-методологію для розробки сайтів з гнучкою архітектурою. Вміло
                                         маніпулюю DOM-деревом. При роботі над проєктами використовую препроцесор SASS для підвищення швидкості верстки
                                         та інструменти для підвищення її автоматизації та оптимізації. Постійно вдосконалюю свої навички. Слідкую за
@@ -339,7 +350,7 @@
                             </ul>
                         </div>
                         <div class="section__content section__content--projects" id="projectsContent">
-                            <h2 class="title title--projects letters letters4">Мої проєкти</h2>
+                            <h2 class="title title--projects letters letters4 lng-myProjects">Мої проєкти</h2>
                             <div class="section__block">
                                 <div class="section__block-item" style="--order: 1">
                                     <div class="section__video-wrap" id="first-video">
@@ -347,7 +358,7 @@
                                             <source src="video/nft_market.mp4" type="video/mp4" />
                                         </video>
                                     </div>
-                                    <p class="section__block-text">
+                                    <p class="section__block-text lng-firstProject">
                                         Односторінковий макет NFT маркету з можливістю обрання зручної кольорової схеми. На сторінці впровадженні такі
                                         інтерактивні об'єкти як форма, слайдер та модальне вікно. При виконанні проєкту використовувалися CSS змінні,
                                         JavaScript modules, Swiper Slider, Google Fonts та Icon Font. Присутнє використання The Rick and Morty REST
@@ -366,14 +377,14 @@
                                     </div>
                                     <div class="section__buttons">
                                         <a
-                                            class="btn btn--projects"
+                                            class="btn btn--projects lng-projectLive"
                                             href="https://astkach.github.io/nft-market/"
                                             target="_blank"
                                             rel="nofollow noopener"
                                             >Hаживо</a
                                         >
                                         <a
-                                            class="btn btn--projects"
+                                            class="btn btn--projects lng-projectCode"
                                             href="https://github.com/ASTkach/nft-market"
                                             target="_blank"
                                             rel="nofollow noopener"
@@ -387,7 +398,7 @@
                                             <source src="video/mamory_pair_game.mp4" type="video/mp4" />
                                         </video>
                                     </div>
-                                    <p class="section__block-text">
+                                    <p class="section__block-text lng-secondProject">
                                         Гра "знайди пару" по мотивам всесвітньо відомої гри Mortal Combat. Має три рівні складності та містить трохи
                                         інтерактиву запозиченого у оригіналу. Гра розроблена за власним дизайном. Не зволікайте та оберіть свою долю.
                                     </p>
@@ -403,14 +414,14 @@
                                     </div>
                                     <div class="section__buttons">
                                         <a
-                                            class="btn btn--projects"
+                                            class="btn btn--projects lng-projectLive"
                                             href="https://astkach.github.io/memory-game/"
                                             target="_blank"
                                             rel="nofollow noopener"
                                             >Hаживо</a
                                         >
                                         <a
-                                            class="btn btn--projects"
+                                            class="btn btn--projects lng-projectCode"
                                             href="https://github.com/ASTkach/memory-game"
                                             target="_blank"
                                             rel="nofollow noopener"
@@ -424,7 +435,7 @@
                                             <source src="video/lasles_vpn.mp4" type="video/mp4" />
                                         </video>
                                     </div>
-                                    <p class="section__block-text">
+                                    <p class="section__block-text lng-thirdProject">
                                         Односторінковий макет VPN сервісу з навігацією по сторінці, анімованими svg малюнками та фіксованою шапкою.
                                         При виконанні проєкту використовувалися CSS змінні, JavaScript modules, Swiper Slider, Google Fonts та Icon
                                         Font. Присутня анімація цифрового лічильника при скроллі.
@@ -441,14 +452,14 @@
                                     </div>
                                     <div class="section__buttons">
                                         <a
-                                            class="btn btn--projects"
+                                            class="btn btn--projects lng-projectLive"
                                             href="https://astkach.github.io/lasles-vpn/"
                                             target="_blank"
                                             rel="nofollow noopener"
                                             >Hаживо</a
                                         >
                                         <a
-                                            class="btn btn--projects"
+                                            class="btn btn--projects lng-projectCode"
                                             href="https://github.com/ASTkach/lasles-vpn"
                                             target="_blank"
                                             rel="nofollow noopener"
@@ -470,7 +481,7 @@
                                                 rel="nofollow noopener"
                                                 tabindex="2"
                                             ></a>
-                                            <p class="contacts__text contacts__text--main">Київ</p>
+                                            <p class="contacts__text contacts__text--main lng-location">Київ</p>
                                         </li>
                                         <li class="contacts__item" style="--order: 2">
                                             <a class="contacts__link contacts__link--main _icon-mobile" href="tel:+380637712603" tabindex="2"></a>
@@ -490,7 +501,7 @@
                                     <label class="form__label" style="--order: 4">
                                         <input
                                             type="text"
-                                            class="form__input"
+                                            class="form__input lng-formName"
                                             name="name"
                                             placeholder="Ім'я та прізвище"
                                             tabindex="2"
@@ -502,7 +513,7 @@
                                     <label class="form__label" style="--order: 5">
                                         <input
                                             type="email"
-                                            class="form__input"
+                                            class="form__input lng-formEmail"
                                             name="email"
                                             placeholder="Поштова адреса"
                                             tabindex="2"
@@ -512,9 +523,15 @@
                                         />
                                     </label>
                                     <label class="form__label" style="--order: 6">
-                                        <textarea class="form__message" name="message" placeholder="Повідомлення" tabindex="2" required></textarea>
+                                        <textarea
+                                            class="form__message lng-formMessage"
+                                            name="message"
+                                            placeholder="Повідомлення"
+                                            tabindex="2"
+                                            required
+                                        ></textarea>
                                     </label>
-                                    <button class="btn btn--submit" type="submit" tabindex="2" style="--order: 7">Відправити</button>
+                                    <button class="btn btn--submit lng-sendForm" type="submit" tabindex="2" style="--order: 7">Відправити</button>
                                 </form>
                                 <div class="contacts contacts--socials">
                                     <ul class="contacts__list contacts__list--socials">
@@ -552,8 +569,8 @@
                                 </div>
                             </div>
                             <div class="section__text-wrap section__text-wrap--contacts">
-                                <h2 class="title title--contacts letters letters5">Зв'язатися</h2>
-                                <div class="section__text section__text--contacts">
+                                <h2 class="title title--contacts letters letters5 lng-contactMe">Зв'язатися</h2>
+                                <div class="section__text section__text--contacts lng-contactMeText">
                                     Якщо у Вас є проєкти, в яких я можу бути Вам корисним, тоді використайте форму, щоб надіслати мені приватне
                                     повідомлення або зв'яжіться зі мною іншим зручним для Вас способом.
                                 </div>
@@ -564,7 +581,7 @@
             </section>
             <footer class="footer">
                 <p class="footer__text">
-                    Розроблено та створено
+                    <span class="lng-created">Розроблено та створено</span>
                     <a class="footer__link" href="https://github.com/ASTkach" target="_blank" rel="nofollow noopener">anatolii.s.tkach</a>
                 </p>
             </footer>
