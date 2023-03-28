@@ -378,16 +378,7 @@ ul {
     }
 }
 
-@media screen and (min-width: 861px) {
-    .nav__button,
-    .nav__item--lng {
-        -webkit-transform: scale(0);
-        transform: scale(0);
-        -webkit-animation: element-scale 0.2s ease forwards;
-        animation: element-scale 0.2s ease forwards;
-        -webkit-animation-delay: calc(var(--order) * 220ms);
-        animation-delay: calc(var(--order) * 220ms);
-    }
+@media screen and (min-width: 1025px) {
     .nav__link::before,
     .nav__link::after {
         position: absolute;
@@ -411,6 +402,45 @@ ul {
     .nav__link::after {
         content: "UA";
         padding-left: 2px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .nav__item--lng::before {
+        position: absolute;
+        content: "";
+        width: 50%;
+        height: 100%;
+        background-color: var(--color-accent-secondary);
+    }
+    .nav__link {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        gap: 0.4rem;
+        width: 100%;
+    }
+    .nav__link span {
+        font-weight: var(--fw-semi-bold);
+    }
+    .nav__link .language--first {
+        color: var(--secondary-bg);
+        z-index: 2;
+    }
+}
+
+@media screen and (min-width: 861px) {
+    .nav__button,
+    .nav__item--lng {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        -webkit-animation: element-scale 0.2s ease forwards;
+        animation: element-scale 0.2s ease forwards;
+        -webkit-animation-delay: calc(var(--order) * 220ms);
+        animation-delay: calc(var(--order) * 220ms);
     }
 }
 @media screen and (max-width: 860px) {
@@ -466,30 +496,11 @@ ul {
     .nav__item--lng {
         width: 60%;
     }
-    .nav__item--lng::before {
-        position: absolute;
-        content: "";
-        width: 50%;
-        height: 100%;
-        background-color: var(--color-accent-secondary);
-    }
     .nav__link {
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
         gap: 0.8rem;
-        width: 100%;
-        z-index: 1;
     }
     .nav__link span {
         color: hsl(45deg, 20%, 55%);
-        font-weight: var(--fw-semi-bold);
-    }
-    .nav__link .language--first {
-        color: var(--secondary-bg);
     }
     .nav__button {
         border-radius: 0.625rem;
@@ -1359,7 +1370,7 @@ ul {
 }
 @media screen and (max-width: 860px) {
     .progress-bar {
-        top: 20vh;
+        top: 14vh;
     }
 }
 

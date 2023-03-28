@@ -11,18 +11,18 @@ const langSelection = () => {
 
     const setupLanguage = () => {
         if (savedLanguage != null) {
-            if (window.innerWidth >= 861) {
+            if (window.innerWidth >= 1025) {
                 language.innerText = savedLanguage.toUpperCase();
             }
 
             if (savedLanguage === "ua") {
-                if (window.innerWidth >= 861) {
+                if (window.innerWidth >= 1025) {
                     language.classList.add("_en-hidden");
                 } else {
                     language.innerHTML = `<span class="language--first">UA</span><span>EN</span>`;
                 }
             } else {
-                if (window.innerWidth >= 861) {
+                if (window.innerWidth >= 1025) {
                     language.classList.add("_ua-hidden");
                 } else {
                     language.innerHTML = `<span class="language--first">EN</span><span>UA</span>`;
@@ -31,7 +31,7 @@ const langSelection = () => {
         } else {
             if (window.navigator.language === "uk") {
                 savedLanguage = "ua";
-                if (window.innerWidth >= 861) {
+                if (window.innerWidth >= 1025) {
                     language.innerText = savedLanguage.toUpperCase();
                     language.classList.add("_en-hidden");
                 } else {
@@ -39,7 +39,7 @@ const langSelection = () => {
                 }
             } else {
                 savedLanguage = "en";
-                if (window.innerWidth >= 861) {
+                if (window.innerWidth >= 1025) {
                     language.innerText = savedLanguage.toUpperCase();
                     language.classList.add("_ua-hidden");
                 } else {
@@ -69,7 +69,7 @@ const langSelection = () => {
     };
 
     window.addEventListener("resize", function () {
-        if (window.innerWidth >= 861 && !smallSize) {
+        if (window.innerWidth >= 1025 && !smallSize) {
             language.innerText = savedLanguage.toUpperCase();
             if (savedLanguage === "ua") {
                 language.classList.add("_en-hidden");
@@ -78,7 +78,7 @@ const langSelection = () => {
             }
             smallSize = true;
             largeSize = false;
-        } else if (window.innerWidth <= 860 && !largeSize) {
+        } else if (window.innerWidth <= 1024 && !largeSize) {
             if (savedLanguage === "ua") {
                 language.innerHTML = `<span class="language--first">UA</span><span>EN</span>`;
             } else {
