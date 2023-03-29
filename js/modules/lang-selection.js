@@ -22,6 +22,7 @@ const langSelection = () => {
                     language.innerHTML = `<span class="language--first">UA</span><span>EN</span>`;
                 }
             } else {
+                title.innerText = langArr["title"][savedLanguage];
                 if (window.innerWidth >= 1025) {
                     language.classList.add("_ua-hidden");
                 } else {
@@ -38,6 +39,7 @@ const langSelection = () => {
                     language.innerHTML = `<span class="language--first">UA</span><span>EN</span>`;
                 }
             } else {
+                title.innerText = langArr["title"][savedLanguage];
                 savedLanguage = "en";
                 if (window.innerWidth >= 1025) {
                     language.innerText = savedLanguage.toUpperCase();
@@ -47,8 +49,6 @@ const langSelection = () => {
                 }
             }
         }
-
-        title.innerText = langArr["title"][savedLanguage];
 
         if (savedLanguage === "en") {
             for (let key in langArr) {
