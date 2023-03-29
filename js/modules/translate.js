@@ -30,9 +30,8 @@ const langArr = {
         en: "About me",
     },
     aboutMePart1: {
-        en: `Hello again! I'm a Frontend Developer located in Kuiv, Ukraine. I have a higher technical education.
-        The main occupation for me has always been music, but at this stage of my life, I am trying to realize my
-         creative potential in web development.`,
+        en: `Hello again! I'm a Frontend Developer located in Kyiv, Ukraine. I have a higher technical education.
+        The main passion for me always has been a music, but now I am trying to realise my creative potential in web development.`,
     },
     aboutMePart2: {
         en: `I have 1 year of work experience. It's more about developing my skills, but I've also been dealing with real
