@@ -1,4 +1,4 @@
-import langArr from "./translate.js";
+import langArr from "./translate-new.js";
 
 const langSelection = () => {
     const language = document.querySelector(".language");
