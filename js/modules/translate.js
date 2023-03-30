@@ -29,8 +29,9 @@ const langArr = {
     aboutMe: {
         en: "About me",
     },
+    // Hello again! I'm a Frontend Developer located in Kyiv, Ukraine.
     aboutMePart1: {
-        en: `Hello again! I'm a Frontend Developer located in Kyiv, Ukraine. I have a higher technical education.
+        en: ` I have a higher technical education.
         The main passion for me always has been a music, but now I am trying to realise my creative potential in web development.`,
     },
     aboutMePart2: {
