@@ -73,9 +73,8 @@
 
 html,
 body {
-    /* width: 100%;
-    min-height: 100vh; */
-    height: 100%;
+    width: 100%;
+    min-height: 100vh;
     font-family: var(--basic-family);
     font-weight: var(--fw-regular);
     color: var(--basic-color);
@@ -155,13 +154,11 @@ ul {
 /* ********** HEADER ********** */
 
 .header {
-    padding-block: 0.9375rem;
+    padding-block: 0;
+    height: 0;
     background-color: var(--secondary-bg);
     -webkit-animation: header-height-animation 0.9s ease forwards;
     animation: header-height-animation 0.9s ease forwards;
-    -webkit-transform: translate(0, -100%);
-    -ms-transform: translate(0, -100%);
-    transform: translate(0, -100%);
 }
 .header__container {
     display: -webkit-box;
@@ -180,23 +177,23 @@ ul {
 
 @-webkit-keyframes header-height-animation {
     0% {
-        -webkit-transform: translate(0, -100%);
-        transform: translate(0, -100%);
+        padding-block: 0;
+        height: 0;
     }
     100% {
-        -webkit-transform: translate(0, 0);
-        transform: translate(0, 0);
+        padding-block: 0.9375rem;
+        height: 4.875rem;
     }
 }
 
 @keyframes header-height-animation {
     0% {
-        -webkit-transform: translate(0, -100%);
-        transform: translate(0, -100%);
+        padding-block: 0;
+        height: 0;
     }
     100% {
-        -webkit-transform: translate(0, 0);
-        transform: translate(0, 0);
+        padding-block: 0.9375rem;
+        height: 4.875rem;
     }
 }
 @-webkit-keyframes element-scale {
@@ -381,7 +378,16 @@ ul {
     }
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 861px) {
+    .nav__button,
+    .nav__item--lng {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        -webkit-animation: element-scale 0.2s ease forwards;
+        animation: element-scale 0.2s ease forwards;
+        -webkit-animation-delay: calc(var(--order) * 220ms);
+        animation-delay: calc(var(--order) * 220ms);
+    }
     .nav__link::before,
     .nav__link::after {
         position: absolute;
@@ -405,45 +411,6 @@ ul {
     .nav__link::after {
         content: 'UA';
         padding-left: 2px;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .nav__item--lng::before {
-        position: absolute;
-        content: '';
-        width: 50%;
-        height: 100%;
-        background-color: var(--color-accent-secondary);
-    }
-    .nav__link {
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        gap: 0.4rem;
-        width: 100%;
-    }
-    .nav__link span {
-        font-weight: var(--fw-semi-bold);
-    }
-    .nav__link .language--first {
-        color: var(--secondary-bg);
-        z-index: 2;
-    }
-}
-
-@media screen and (min-width: 861px) {
-    .nav__button,
-    .nav__item--lng {
-        -webkit-transform: scale(0);
-        transform: scale(0);
-        -webkit-animation: element-scale 0.2s ease forwards;
-        animation: element-scale 0.2s ease forwards;
-        -webkit-animation-delay: calc(var(--order) * 220ms);
-        animation-delay: calc(var(--order) * 220ms);
     }
 }
 @media screen and (max-width: 860px) {
@@ -499,11 +466,30 @@ ul {
     .nav__item--lng {
         width: 60%;
     }
+    .nav__item--lng::before {
+        position: absolute;
+        content: '';
+        width: 50%;
+        height: 100%;
+        background-color: var(--color-accent-secondary);
+    }
     .nav__link {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
         gap: 0.8rem;
+        width: 100%;
+        z-index: 1;
     }
     .nav__link span {
         color: hsl(45deg, 20%, 55%);
+        font-weight: var(--fw-semi-bold);
+    }
+    .nav__link .language--first {
+        color: var(--secondary-bg);
     }
     .nav__button {
         border-radius: 0.625rem;
@@ -1395,7 +1381,7 @@ ul {
 }
 @media screen and (max-width: 860px) {
     .progress-bar {
-        top: 14vh;
+        top: 20vh;
     }
 }
 
@@ -1864,9 +1850,14 @@ ul {
 /* ********** BUTTON ********** */
 
 .btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     width: 100%;
     padding: 0.5rem;
-    text-align: center;
     color: var(--basic-color);
     font-weight: var(--fw-semi-bold);
     font-size: var(--fz-300);
