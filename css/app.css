@@ -81,10 +81,6 @@ body {
     margin: 0;
 }
 
-body {
-    overflow-y: scroll;
-}
-
 body._lock {
     overflow: hidden;
 }
