@@ -154,11 +154,13 @@ ul {
 /* ********** HEADER ********** */
 
 .header {
-    padding-block: 0;
-    height: 0;
+    /* padding-block: 0;
+    height: 0; */
+    padding-block: 0.9375rem;
+    height: 4.875rem;
     background-color: var(--secondary-bg);
-    -webkit-animation: header-height-animation 0.9s ease forwards;
-    animation: header-height-animation 0.9s ease forwards;
+    /* -webkit-animation: header-height-animation 0.9s ease forwards;
+    animation: header-height-animation 0.9s ease forwards; */
 }
 .header__container {
     display: -webkit-box;
@@ -175,7 +177,7 @@ ul {
     display: none;
 }
 
-@-webkit-keyframes header-height-animation {
+/* @-webkit-keyframes header-height-animation {
     0% {
         padding-block: 0;
         height: 0;
@@ -207,7 +209,7 @@ ul {
         -webkit-transform: scale(1);
         transform: scale(1);
     }
-}
+} */
 @media screen and (max-width: 860px) {
     .header__icon {
         display: block;
@@ -215,13 +217,14 @@ ul {
         height: 1.5625rem;
         margin-right: 5px;
         cursor: pointer;
-        -webkit-transform: scale(0);
+        transform: scale(1);
+        /* -webkit-transform: scale(0);
         -ms-transform: scale(0);
-        transform: scale(0);
-        -webkit-animation: element-scale 0.6s linear forwards 0.3s;
+        transform: scale(0); */
+        /* -webkit-animation: element-scale 0.6s linear forwards 0.3s; */
         box-shadow: 0 0 3px 4px var(--secondary-bg), 0 0 0 5px var(--color-accent-therd);
         border-radius: 1px;
-        animation: element-scale 0.6s linear forwards 0.3s;
+        /* animation: element-scale 0.6s linear forwards 0.3s; */
         z-index: 3;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
@@ -266,11 +269,11 @@ ul {
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
-    -webkit-animation: logo-scale 0.6s linear forwards 0.3s;
-    animation: logo-scale 0.6s linear forwards 0.3s;
-    -webkit-transform: rotate(360deg) scale(0);
+    /* -webkit-animation: logo-scale 0.6s linear forwards 0.3s;
+    animation: logo-scale 0.6s linear forwards 0.3s; */
+    /* -webkit-transform: rotate(360deg) scale(0);
     -ms-transform: rotate(360deg) scale(0);
-    transform: rotate(360deg) scale(0);
+    transform: rotate(360deg) scale(0); */
     translate: 0.3125rem;
     rotate: -90deg;
     z-index: 4;
@@ -280,7 +283,7 @@ ul {
     color: var(--color-accent-therd);
 }
 
-@-webkit-keyframes logo-scale {
+/* @-webkit-keyframes logo-scale {
     100% {
         -webkit-transform: rotate(0) scale(1);
         transform: rotate(0) scale(1);
@@ -295,7 +298,7 @@ ul {
         -webkit-transform: rotate(0) scale(1);
         transform: rotate(0) scale(1);
     }
-}
+} */
 
 /* ********** NAV ********** */
 
@@ -381,12 +384,12 @@ ul {
 @media screen and (min-width: 861px) {
     .nav__button,
     .nav__item--lng {
-        -webkit-transform: scale(0);
-        transform: scale(0);
-        -webkit-animation: element-scale 0.2s ease forwards;
+        /* -webkit-transform: scale(0);
+        transform: scale(0); */
+        /* -webkit-animation: element-scale 0.2s ease forwards;
         animation: element-scale 0.2s ease forwards;
         -webkit-animation-delay: calc(var(--order) * 220ms);
-        animation-delay: calc(var(--order) * 220ms);
+        animation-delay: calc(var(--order) * 220ms); */
     }
     .nav__link::before,
     .nav__link::after {
@@ -1204,11 +1207,11 @@ ul {
     padding-block: 0.9375rem;
     text-align: center;
     background-color: var(--secondary-bg);
-    -webkit-transform: translate(0, 100%);
+    /* -webkit-transform: translate(0, 100%);
     -ms-transform: translate(0, 100%);
-    transform: translate(0, 100%);
-    -webkit-animation: footer-height-animation 0.9s ease forwards;
-    animation: footer-height-animation 0.9s ease forwards;
+    transform: translate(0, 100%); */
+    /* -webkit-animation: footer-height-animation 0.9s ease forwards;
+    animation: footer-height-animation 0.9s ease forwards; */
     z-index: 1;
 }
 .footer__text {
@@ -1218,7 +1221,7 @@ ul {
     color: var(--color-accent-secondary);
 }
 
-@-webkit-keyframes footer-height-animation {
+/* @-webkit-keyframes footer-height-animation {
     0% {
         -webkit-transform: translate(0, 100%);
         transform: translate(0, 100%);
@@ -1238,7 +1241,7 @@ ul {
         -webkit-transform: translate(0, 0);
         transform: translate(0, 0);
     }
-}
+} */
 
 /* ********** TITLE ********** */
 
