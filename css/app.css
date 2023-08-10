@@ -193,7 +193,7 @@ ul {
         padding-block: 0.9375rem;
         height: 4.875rem;
     }
-}
+} */
 @-webkit-keyframes element-scale {
     100% {
         -webkit-transform: scale(1);
@@ -205,7 +205,7 @@ ul {
         -webkit-transform: scale(1);
         transform: scale(1);
     }
-} */
+}
 @media screen and (max-width: 860px) {
     .header__icon {
         display: block;
