@@ -1,14 +1,14 @@
 @font-face {
-    font-family: "icons";
-    src: url("../fonts/icons.woff") format("woff");
+    font-family: 'icons';
+    src: url('../fonts/icons.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: block;
 }
-[class^="_icon-"]::before,
-[class*=" _icon-"]::before {
+[class^='_icon-']::before,
+[class*=' _icon-']::before {
     /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: "icons" !important;
+    font-family: 'icons' !important;
     speak: never;
     font-style: normal;
     font-weight: normal;
@@ -21,32 +21,32 @@
 }
 
 ._icon-mobile:before {
-    content: "\e904";
+    content: '\e904';
 }
 
 ._icon-location:before {
-    content: "\e905";
+    content: '\e905';
 }
 
 ._icon-github:before {
-    content: "\e901";
+    content: '\e901';
 }
 
 ._icon-mail:before {
-    content: "\e900";
+    content: '\e900';
 }
 
 ._icon-telegram:before {
-    content: "\e902";
+    content: '\e902';
 }
 
 ._icon-viber:before {
-    content: "\e903";
+    content: '\e903';
 }
 
 :root {
-    --basic-family: "Exo 2", sans-serif;
-    --secondary-family: "Coiny", cursive;
+    --basic-family: 'Exo 2', sans-serif;
+    --secondary-family: 'Coiny', cursive;
     --fz-50: 0.75rem;
     --fz-100: 0.8125rem;
     --fz-200: 0.875rem;
@@ -155,11 +155,13 @@ ul {
 /* ********** HEADER ********** */
 
 .header {
-    padding-block: 0;
-    height: 0;
+    padding-block: 0.9375rem;
     background-color: var(--secondary-bg);
     -webkit-animation: header-height-animation 0.9s ease forwards;
     animation: header-height-animation 0.9s ease forwards;
+    -webkit-transform: translate(0, -100%);
+    -ms-transform: translate(0, -100%);
+    transform: translate(0, -100%);
 }
 .header__container {
     display: -webkit-box;
@@ -178,23 +180,23 @@ ul {
 
 @-webkit-keyframes header-height-animation {
     0% {
-        padding-block: 0;
-        height: 0;
+        -webkit-transform: translate(0, -100%);
+        transform: translate(0, -100%);
     }
     100% {
-        padding-block: 0.9375rem;
-        height: 4.875rem;
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
     }
 }
 
 @keyframes header-height-animation {
     0% {
-        padding-block: 0;
-        height: 0;
+        -webkit-transform: translate(0, -100%);
+        transform: translate(0, -100%);
     }
     100% {
-        padding-block: 0.9375rem;
-        height: 4.875rem;
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
     }
 }
 @-webkit-keyframes element-scale {
@@ -347,7 +349,7 @@ ul {
 .nav__button::after {
     display: none;
     position: absolute;
-    content: "";
+    content: '';
     top: 50%;
     width: 360%;
     background-color: var(--color-accent-primary);
@@ -397,11 +399,11 @@ ul {
         background-color: var(--color-accent-secondary);
     }
     .nav__link::before {
-        content: "EN";
+        content: 'EN';
         padding-left: 3px;
     }
     .nav__link::after {
-        content: "UA";
+        content: 'UA';
         padding-left: 2px;
     }
 }
@@ -409,7 +411,7 @@ ul {
 @media screen and (max-width: 1024px) {
     .nav__item--lng::before {
         position: absolute;
-        content: "";
+        content: '';
         width: 50%;
         height: 100%;
         background-color: var(--color-accent-secondary);
@@ -506,8 +508,10 @@ ul {
     .nav__button {
         border-radius: 0.625rem;
         background-color: var(--secondary-bg);
-        -webkit-box-shadow: 3px -3px 0px 0px var(--secondary-bg), 5px -5px 0px 0px var(--color-accent-primary);
-        box-shadow: 3px -3px 0px 0px var(--secondary-bg), 5px -5px 0px 0px var(--color-accent-primary);
+        -webkit-box-shadow: 3px -3px 0px 0px var(--secondary-bg),
+            5px -5px 0px 0px var(--color-accent-primary);
+        box-shadow: 3px -3px 0px 0px var(--secondary-bg),
+            5px -5px 0px 0px var(--color-accent-primary);
         border: var(--border-main-width) solid var(--color-accent-primary);
         color: hsl(45deg, 20%, 55%);
     }
@@ -518,7 +522,8 @@ ul {
     .nav__button._pressed-btn {
         background-color: var(--color-accent-primary);
         border: var(--border-main-width) solid var(--color-accent-primary);
-        -webkit-box-shadow: 2px -2px 0px 0px var(--basic-bg), 4px -4px 0px 0px var(--color-accent-primary);
+        -webkit-box-shadow: 2px -2px 0px 0px var(--basic-bg),
+            4px -4px 0px 0px var(--color-accent-primary);
         box-shadow: 2px -2px 0px 0px var(--basic-bg), 4px -4px 0px 0px var(--color-accent-primary);
         color: var(--basic-color);
         -webkit-transform: translate(1px, -1px);
@@ -727,7 +732,7 @@ ul {
 }
 .section__text-row:not(:last-child)::before {
     position: absolute;
-    content: "";
+    content: '';
     bottom: -1.15625rem;
     left: 0;
     width: 20%;
@@ -743,7 +748,7 @@ ul {
 }
 .section__video-wrap::before {
     position: absolute;
-    content: "";
+    content: '';
     bottom: -1.875rem;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -966,11 +971,15 @@ ul {
         height: 1.25rem;
         border-radius: 0.3125rem;
         background-color: var(--basic-bg);
-        -webkit-box-shadow: 0.3125rem -0.3125rem 0px 0px var(--basic-bg), 0.625rem -0.625rem 0px 0px var(--red-color),
-            0.9375rem -0.9375rem 0px 0px var(--basic-bg), 1.25rem -1.25rem 0px 0px var(--red-color), 1.5625rem -1.5625rem 0px 0px var(--basic-bg),
+        -webkit-box-shadow: 0.3125rem -0.3125rem 0px 0px var(--basic-bg),
+            0.625rem -0.625rem 0px 0px var(--red-color),
+            0.9375rem -0.9375rem 0px 0px var(--basic-bg), 1.25rem -1.25rem 0px 0px var(--red-color),
+            1.5625rem -1.5625rem 0px 0px var(--basic-bg),
             1.875rem -1.875rem 0px 0px var(--red-color);
-        box-shadow: 0.3125rem -0.3125rem 0px 0px var(--basic-bg), 0.625rem -0.625rem 0px 0px var(--red-color),
-            0.9375rem -0.9375rem 0px 0px var(--basic-bg), 1.25rem -1.25rem 0px 0px var(--red-color), 1.5625rem -1.5625rem 0px 0px var(--basic-bg),
+        box-shadow: 0.3125rem -0.3125rem 0px 0px var(--basic-bg),
+            0.625rem -0.625rem 0px 0px var(--red-color),
+            0.9375rem -0.9375rem 0px 0px var(--basic-bg), 1.25rem -1.25rem 0px 0px var(--red-color),
+            1.5625rem -1.5625rem 0px 0px var(--basic-bg),
             1.875rem -1.875rem 0px 0px var(--red-color);
         -webkit-animation: arrow-movement 1s linear infinite;
         animation: arrow-movement 1s linear infinite;
@@ -989,11 +998,17 @@ ul {
         box-shadow: 0px 0px 0px 2px var(--basic-bg), 0px 0px 0px 5px var(--green-color);
     }
     .section__button._play .section__button-arrows {
-        -webkit-box-shadow: 0.3125rem -0.3125rem 0px 0px var(--basic-bg), 0.625rem -0.625rem 0px 0px var(--green-color),
-            0.9375rem -0.9375rem 0px 0px var(--basic-bg), 1.25rem -1.25rem 0px 0px var(--green-color), 1.5625rem -1.5625rem 0px 0px var(--basic-bg),
+        -webkit-box-shadow: 0.3125rem -0.3125rem 0px 0px var(--basic-bg),
+            0.625rem -0.625rem 0px 0px var(--green-color),
+            0.9375rem -0.9375rem 0px 0px var(--basic-bg),
+            1.25rem -1.25rem 0px 0px var(--green-color),
+            1.5625rem -1.5625rem 0px 0px var(--basic-bg),
             1.875rem -1.875rem 0px 0px var(--green-color);
-        box-shadow: 0.3125rem -0.3125rem 0px 0px var(--basic-bg), 0.625rem -0.625rem 0px 0px var(--green-color),
-            0.9375rem -0.9375rem 0px 0px var(--basic-bg), 1.25rem -1.25rem 0px 0px var(--green-color), 1.5625rem -1.5625rem 0px 0px var(--basic-bg),
+        box-shadow: 0.3125rem -0.3125rem 0px 0px var(--basic-bg),
+            0.625rem -0.625rem 0px 0px var(--green-color),
+            0.9375rem -0.9375rem 0px 0px var(--basic-bg),
+            1.25rem -1.25rem 0px 0px var(--green-color),
+            1.5625rem -1.5625rem 0px 0px var(--basic-bg),
             1.875rem -1.875rem 0px 0px var(--green-color);
     }
     .section__block--form {
@@ -1134,7 +1149,8 @@ ul {
     border-radius: 0.3125rem;
     background-color: var(--secondary-bg);
     border: var(--border-main-width) solid var(--color-accent-primary);
-    -webkit-box-shadow: -3px 3px 0px 0px var(--basic-bg), -5px 5px 0px 0px var(--color-accent-primary);
+    -webkit-box-shadow: -3px 3px 0px 0px var(--basic-bg),
+        -5px 5px 0px 0px var(--color-accent-primary);
     box-shadow: -3px 3px 0px 0px var(--basic-bg), -5px 5px 0px 0px var(--color-accent-primary);
     z-index: 1;
     -webkit-transition: all 0.3s linear 0s;
@@ -1152,8 +1168,10 @@ ul {
 .form__message:-webkit-autofill,
 .form__message:-webkit-autofill:hover {
     border-color: var(--green-color);
-    -webkit-box-shadow: -3px 3px 0px 0px var(--basic-bg), -5px 5px 0px 0px var(--green-color), 0px 0px 0px 62.5rem var(--secondary-bg) inset;
-    box-shadow: -3px 3px 0px 0px var(--basic-bg), -5px 5px 0px 0px var(--green-color), 0px 0px 0px 62.5rem var(--secondary-bg) inset;
+    -webkit-box-shadow: -3px 3px 0px 0px var(--basic-bg), -5px 5px 0px 0px var(--green-color),
+        0px 0px 0px 62.5rem var(--secondary-bg) inset;
+    box-shadow: -3px 3px 0px 0px var(--basic-bg), -5px 5px 0px 0px var(--green-color),
+        0px 0px 0px 62.5rem var(--secondary-bg) inset;
     -webkit-text-fill-color: var(--basic-color);
     caret-color: var(--basic-color);
 }
@@ -1334,12 +1352,18 @@ ul {
 }
 .progress-bar::before {
     position: absolute;
-    content: "";
+    content: '';
     width: 0;
     height: 100%;
     top: 0;
     left: 0;
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(3%, rgb(202, 103, 2)), color-stop(85%, rgb(155, 34, 38)));
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(3%, rgb(202, 103, 2)),
+        color-stop(85%, rgb(155, 34, 38))
+    );
     background-image: -o-linear-gradient(left, rgb(202, 103, 2) 3%, rgb(155, 34, 38) 85%);
     background-image: linear-gradient(90deg, rgb(202, 103, 2) 3%, rgb(155, 34, 38) 85%);
     border-radius: 1.25rem;
@@ -1418,7 +1442,7 @@ ul {
 }
 .game__item::before {
     position: absolute;
-    content: "";
+    content: '';
     top: -0.5625rem;
     left: 0.375rem;
     background-color: transparent;
@@ -1734,7 +1758,7 @@ ul {
 }
 .contacts__text--main::before {
     position: absolute;
-    content: "";
+    content: '';
     left: 0;
     bottom: -0.1875rem;
     width: 0;
@@ -1849,7 +1873,8 @@ ul {
     background-color: var(--secondary-bg);
     border: var(--border-main-width) solid var(--color-accent-secondary);
     border-radius: 0.3125rem;
-    -webkit-box-shadow: 3px -3px 0px 0px var(--basic-bg), 5px -5px 0px 0px var(--color-accent-secondary);
+    -webkit-box-shadow: 3px -3px 0px 0px var(--basic-bg),
+        5px -5px 0px 0px var(--color-accent-secondary);
     box-shadow: 3px -3px 0px 0px var(--basic-bg), 5px -5px 0px 0px var(--color-accent-secondary);
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
@@ -1865,7 +1890,8 @@ ul {
     transform: scale(0);
 }
 .btn--submit {
-    -webkit-box-shadow: -3px 3px 0px 0px var(--basic-bg), -5px 5px 0px 0px var(--color-accent-secondary);
+    -webkit-box-shadow: -3px 3px 0px 0px var(--basic-bg),
+        -5px 5px 0px 0px var(--color-accent-secondary);
     box-shadow: -3px 3px 0px 0px var(--basic-bg), -5px 5px 0px 0px var(--color-accent-secondary);
     padding: 0.9375rem;
     -webkit-animation: form-scale 0.2s linear forwards;
