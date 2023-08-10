@@ -1,58 +1,58 @@
-import langArr from "./translate-new.js";
+import langArr from './translate-new.js';
 
 const langSelection = () => {
-    const language = document.querySelector(".language");
-    const title = document.querySelector("title");
-    const getSavedLanguage = () => localStorage.getItem("selected-language");
-    const saveLanguage = (language) => localStorage.setItem("selected-language", language);
+    const language = document.querySelector('.language');
+    const title = document.querySelector('title');
+    const getSavedLanguage = () => localStorage.getItem('selected-language');
+    const saveLanguage = (language) => localStorage.setItem('selected-language', language);
     let savedLanguage = getSavedLanguage();
     let largeSize;
     let smallSize;
 
     const setupLanguage = () => {
         if (savedLanguage != null) {
-            if (window.innerWidth >= 1025) {
+            if (window.innerWidth >= 861) {
                 language.innerText = savedLanguage.toUpperCase();
             }
 
-            if (savedLanguage === "ua") {
-                if (window.innerWidth >= 1025) {
-                    language.classList.add("_en-hidden");
+            if (savedLanguage === 'ua') {
+                if (window.innerWidth >= 861) {
+                    language.classList.add('_en-hidden');
                 } else {
                     language.innerHTML = `<span class="language--first">UA</span><span>EN</span>`;
                 }
             } else {
-                title.innerText = langArr["title"][savedLanguage];
-                if (window.innerWidth >= 1025) {
-                    language.classList.add("_ua-hidden");
+                title.innerText = langArr['title'][savedLanguage];
+                if (window.innerWidth >= 861) {
+                    language.classList.add('_ua-hidden');
                 } else {
                     language.innerHTML = `<span class="language--first">EN</span><span>UA</span>`;
                 }
             }
         } else {
-            if (window.navigator.language === "uk") {
-                savedLanguage = "ua";
-                if (window.innerWidth >= 1025) {
+            if (window.navigator.language === 'uk') {
+                savedLanguage = 'ua';
+                if (window.innerWidth >= 861) {
                     language.innerText = savedLanguage.toUpperCase();
-                    language.classList.add("_en-hidden");
+                    language.classList.add('_en-hidden');
                 } else {
                     language.innerHTML = `<span class="language--first">UA</span><span>EN</span>`;
                 }
             } else {
-                title.innerText = langArr["title"][savedLanguage];
-                savedLanguage = "en";
-                if (window.innerWidth >= 1025) {
+                title.innerText = langArr['title'][savedLanguage];
+                savedLanguage = 'en';
+                if (window.innerWidth >= 861) {
                     language.innerText = savedLanguage.toUpperCase();
-                    language.classList.add("_ua-hidden");
+                    language.classList.add('_ua-hidden');
                 } else {
                     language.innerHTML = `<span class="language--first">EN</span><span>UA</span>`;
                 }
             }
         }
 
-        if (savedLanguage === "en") {
+        if (savedLanguage === 'en') {
             for (let key in langArr) {
-                let elements = document.querySelectorAll(".lng-" + key);
+                let elements = document.querySelectorAll('.lng-' + key);
 
                 if (elements) {
                     elements.forEach((el) => {
@@ -68,18 +68,18 @@ const langSelection = () => {
         }
     };
 
-    window.addEventListener("resize", function () {
-        if (window.innerWidth >= 1025 && !smallSize) {
+    window.addEventListener('resize', function () {
+        if (window.innerWidth >= 861 && !smallSize) {
             language.innerText = savedLanguage.toUpperCase();
-            if (savedLanguage === "ua") {
-                language.classList.add("_en-hidden");
+            if (savedLanguage === 'ua') {
+                language.classList.add('_en-hidden');
             } else {
-                language.classList.add("_ua-hidden");
+                language.classList.add('_ua-hidden');
             }
             smallSize = true;
             largeSize = false;
-        } else if (window.innerWidth <= 1024 && !largeSize) {
-            if (savedLanguage === "ua") {
+        } else if (window.innerWidth <= 860 && !largeSize) {
+            if (savedLanguage === 'ua') {
                 language.innerHTML = `<span class="language--first">UA</span><span>EN</span>`;
             } else {
                 language.innerHTML = `<span class="language--first">EN</span><span>UA</span>`;
@@ -89,12 +89,12 @@ const langSelection = () => {
         }
     });
 
-    language.addEventListener("click", () => {
-        if (savedLanguage === "ua") {
-            saveLanguage("en");
+    language.addEventListener('click', () => {
+        if (savedLanguage === 'ua') {
+            saveLanguage('en');
             location.reload();
         } else {
-            saveLanguage("ua");
+            saveLanguage('ua');
             location.reload();
         }
     });
