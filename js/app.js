@@ -8,7 +8,12 @@ movingLetters();
 ticTacToe();
 langSelection();
 
-window.addEventListener('load', () => {
+// window.addEventListener('load', () => {
+//     const wrapper = document.querySelector('.wrapper');
+//     wrapper.classList.add('_visibl');
+// });
+
+setTimeout(() => {
     const wrapper = document.querySelector('.wrapper');
     wrapper.classList.add('_visibl');
-});
+}, 400);
